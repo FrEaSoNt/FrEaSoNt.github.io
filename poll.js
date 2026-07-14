@@ -5,9 +5,15 @@
 })(typeof window !== 'undefined' ? window : globalThis, function () {
   'use strict';
 
-  const DEFAULT_API_BASE = 'https://api.counterapi.dev/v1/freason-august-2026';
+  const DEFAULT_API_BASE = 'https://countapi.mileshilliard.com/api/v1';
   const POLL_SLUGS = Object.freeze(['jucheng', 'sengui', 'tingshan', 'xiangxi']);
-  const STORAGE_KEY = 'freason-august-2026-poll-v1';
+  const POLL_KEYS = Object.freeze({
+    jucheng: 'freason-august-2026-poll-jucheng-v2',
+    sengui: 'freason-august-2026-poll-sengui-v2',
+    tingshan: 'freason-august-2026-poll-tingshan-v2',
+    xiangxi: 'freason-august-2026-poll-xiangxi-v2'
+  });
+  const STORAGE_KEY = 'freason-august-2026-poll-v2';
 
   function isValidSlug(value) {
     return POLL_SLUGS.includes(value);
@@ -15,25 +21,14 @@
 
   function readCount(payload) {
     const isObject = payload !== null && typeof payload === 'object' && !Array.isArray(payload);
-    const data = isObject && payload.data !== null && typeof payload.data === 'object' && !Array.isArray(payload.data)
-      ? payload.data
-      : null;
-    const candidates = isObject ? [
-      payload.count,
-      payload.value,
-      payload.up_count,
-      data && data.count,
-      data && data.value,
-      data && data.up_count
-    ] : [];
+    const value = isObject ? payload.value : undefined;
     const isNumericCount = (value) => {
       if (typeof value === 'number') return Number.isFinite(value);
       if (typeof value === 'string') return value.trim() !== '' && Number.isFinite(Number(value));
       return false;
     };
-    const count = candidates.find(isNumericCount);
-    if (count === undefined) throw new Error('Unrecognized counter response');
-    return Math.max(0, Math.trunc(Number(count)));
+    if (!isNumericCount(value)) throw new Error('Unrecognized counter response');
+    return Math.max(0, Math.trunc(Number(value)));
   }
 
   function createCounterClient(options) {
@@ -47,7 +42,8 @@
       if (!isValidSlug(slug)) throw new Error('Unknown poll option');
       const controller = new AbortController();
       const timer = setTimeout(() => controller.abort(), timeoutMs);
-      const path = increment ? `/${slug}/up/` : `/${slug}/`;
+      const action = increment ? 'hit' : 'get';
+      const path = `/${action}/${POLL_KEYS[slug]}`;
       try {
         const response = await fetchImpl(apiBase + path, {
           method: 'GET',
@@ -57,7 +53,7 @@
           headers: { Accept: 'application/json' },
           signal: controller.signal
         });
-        if (!increment && response.status === 400) return 0;
+        if (!increment && response.status === 404) return 0;
         if (!response.ok) throw new Error(`Counter request failed (${response.status})`);
         return readCount(await response.json());
       } finally {
@@ -186,6 +182,8 @@
     const counts = new Map(Array.from(documentRef.querySelectorAll('[data-count]')).map((node) => [node.dataset.count, node]));
     const voteState = createVoteState(storage, settings.tokenFactory);
     const countVersions = new Map(POLL_SLUGS.map((slug) => [slug, 0]));
+    let pendingVote = null;
+    let failedVote = null;
 
     function announce(message) {
       if (status) status.textContent = message;
@@ -197,8 +195,15 @@
       buttons.forEach((button) => {
         button.disabled = Boolean(selected) || voteState.isBusy() || !voteState.hasStorage();
         const isSelected = button.dataset.vote === selected;
+        const isPending = voteState.isBusy() && button.dataset.vote === pendingVote;
+        const isFailed = !selected && !voteState.isBusy() && button.dataset.vote === failedVote;
         const label = button.firstChild;
-        if (label) label.textContent = isSelected ? '已选这处 ' : '投这一处 ';
+        if (label) {
+          if (isSelected) label.textContent = '已选这处 ';
+          else if (isPending) label.textContent = '正在投票… ';
+          else if (isFailed) label.textContent = '投票失败，请重试 ';
+          else label.textContent = '投这一处 ';
+        }
         button.setAttribute('aria-pressed', String(isSelected));
       });
     }
@@ -235,6 +240,8 @@
 
     async function vote(slug) {
       if (!voteState.begin(slug)) return false;
+      pendingVote = slug;
+      failedVote = null;
       renderSelection();
       announce('正在送出这一票…');
       try {
@@ -242,13 +249,16 @@
         countVersions.set(slug, countVersions.get(slug) + 1);
         if (!voteState.commit(slug)) throw new Error('Vote ownership changed');
         renderCount(slug, value);
+        failedVote = null;
         announce('已记下你的选择。绿色卡片是这台设备投出的选项。');
         return true;
       } catch (_) {
         voteState.rollback();
+        failedVote = slug;
         announce('这一票暂时没有送出，请稍后再试；看房源和页面其他内容不受影响。');
         return false;
       } finally {
+        pendingVote = null;
         renderSelection();
       }
     }
@@ -277,5 +287,5 @@
     return { loadCounts, vote, getSelected: () => voteState.getSelected() };
   }
 
-  return { DEFAULT_API_BASE, POLL_SLUGS, STORAGE_KEY, isValidSlug, readCount, createCounterClient, createVoteState, startPoll };
+  return { DEFAULT_API_BASE, POLL_SLUGS, POLL_KEYS, STORAGE_KEY, isValidSlug, readCount, createCounterClient, createVoteState, startPoll };
 });
