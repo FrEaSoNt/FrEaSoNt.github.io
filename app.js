@@ -2,11 +2,10 @@
   'use strict';
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const wideScreen = window.matchMedia('(min-width: 761px)').matches;
   const revealNodes = document.querySelectorAll('.reveal');
 
-  if (reduceMotion || !('IntersectionObserver' in window)) {
-    revealNodes.forEach((node) => node.classList.add('is-visible'));
-  } else {
+  if (!reduceMotion && wideScreen && 'IntersectionObserver' in window && revealNodes.length) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -15,7 +14,12 @@
         }
       });
     }, { rootMargin: '0px 0px -8%', threshold: 0.08 });
+    document.documentElement.classList.add('reveal-ready');
     revealNodes.forEach((node) => observer.observe(node));
+    window.setTimeout(() => {
+      revealNodes.forEach((node) => node.classList.add('is-visible'));
+      observer.disconnect();
+    }, 1800);
   }
 
   if (window.FreasonPoll) {

@@ -31,15 +31,20 @@
   <link rel="apple-touch-icon" href="/assets/share/freason-share-square.jpg">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preload" href="/assets/stays/jucheng-hero.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="/styles.css">
-  <script src="/poll.js?v=20260714-2" defer></script>
-  <script src="/app.js" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=20260714-3">
+  <script src="/poll.js?v=20260714-3" defer></script>
+  <script src="/app.js?v=20260714-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
 
   <header class="hero" id="top">
-    <img class="hero__image" src="/assets/stays/jucheng-hero.webp" width="960" height="660" alt="树木与水面环绕的聚城园舍房源图片" fetchpriority="high">
+    <div class="hero-collage" aria-hidden="true">
+      <img src="/assets/stays/jucheng-hero.webp" width="960" height="660" alt="" data-hero-property="jucheng" fetchpriority="high">
+      <img src="/assets/stays/sengui-hero.webp" width="960" height="660" alt="" data-hero-property="sengui" decoding="async">
+      <img src="/assets/stays/tingshan-hero.webp" width="960" height="660" alt="" data-hero-property="tingshan" decoding="async">
+      <img src="/assets/stays/xiangxi-hero.webp" width="960" height="660" alt="" data-hero-property="xiangxi" decoding="async">
+    </div>
     <div class="hero__shade" aria-hidden="true"></div>
     <div class="hero__inner shell">
       <nav class="site-nav" aria-label="页面导航">
@@ -102,9 +107,10 @@
             <p class="confirm">下单前，请商家按日期和房间分配给出书面总价，并确认院落位置、泳池权限与实时水况。</p>
             <a class="property-cta" href="https://hotels.ctrip.com/hotels/5653016.html" target="_blank" rel="noopener noreferrer">打开携程房源 <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="mosaic reveal" aria-label="聚城园舍房源图片">
-            <img src="/assets/stays/jucheng-stay.webp" width="600" height="360" alt="聚城园舍住宿空间" loading="lazy">
-            <img src="/assets/stays/jucheng-stream.webp" width="600" height="360" alt="聚城园舍水边环境" loading="lazy">
+          <div class="mosaic mosaic--three reveal" aria-label="聚城园舍房源图片">
+            <img src="/assets/stays/jucheng-stay.webp" width="600" height="360" alt="聚城园舍夜间泳池与院落" loading="lazy">
+            <img src="/assets/stays/jucheng-stream.webp" width="600" height="360" alt="聚城园舍泳池与水边环境" loading="lazy">
+            <img src="/assets/stays/jucheng-gallery-a.webp" width="1138" height="853" alt="聚城园舍泳池与院落航拍" loading="lazy">
           </div>
         </div>
       </article>
@@ -139,9 +145,11 @@
             <p class="confirm">下单前，请商家按日期和房间分配给出书面总价，并确认整栋边界、公共区域与雨天溪水安排。</p>
             <a class="property-cta" href="https://hotels.ctrip.com/hotels/112741005.html" target="_blank" rel="noopener noreferrer">打开携程房源 <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="mosaic reveal" aria-label="南昆山森归房源图片">
-            <img src="/assets/stays/sengui-stay.webp" width="600" height="360" alt="南昆山森归住宿空间" loading="lazy">
+          <div class="mosaic mosaic--four reveal" aria-label="南昆山森归房源图片">
+            <img src="/assets/stays/sengui-stay.webp" width="600" height="360" alt="南昆山森归山林泳池" loading="lazy">
             <img src="/assets/stays/sengui-stream.webp" width="600" height="360" alt="南昆山森归来源图片中的自然浅溪" loading="lazy">
+            <img src="/assets/stays/sengui-gallery-a.webp" width="1057" height="853" alt="南昆山森归山林与户外草坪" loading="lazy">
+            <img src="/assets/stays/sengui-gallery-b.webp" width="1280" height="853" alt="南昆山森归夜间院落与住宿建筑" loading="lazy">
           </div>
         </div>
       </article>
@@ -176,14 +184,16 @@
             <p class="confirm">下单前，请商家按日期和房间分配给出书面总价，并确认半包场范围、床位清单及水域开放条件。</p>
             <a class="property-cta" href="https://hotels.ctrip.com/hotels/127225411.html" target="_blank" rel="noopener noreferrer">打开携程房源 <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="mosaic reveal" aria-label="南昆山听山房源图片">
-            <img src="/assets/stays/tingshan-stay.webp" width="600" height="360" alt="南昆山听山住宿空间" loading="lazy">
+          <div class="mosaic mosaic--four reveal" aria-label="南昆山听山房源图片">
+            <img src="/assets/stays/tingshan-stay.webp" width="600" height="360" alt="南昆山听山户外泳池" loading="lazy">
             <img src="/assets/stays/tingshan-stream.webp" width="600" height="360" alt="南昆山听山山林户外餐桌空间" loading="lazy">
+            <img src="/assets/stays/tingshan-gallery-a.webp" width="1280" height="853" alt="南昆山听山夜间泳池与住宿建筑" loading="lazy">
+            <img src="/assets/stays/tingshan-gallery-b.webp" width="1280" height="853" alt="南昆山听山山林中的住宿建筑" loading="lazy">
           </div>
         </div>
       </article>
 
-      <article class="stay stay--sand" id="xiangxi" data-property="xiangxi" aria-labelledby="xiangxi-title">
+      <article class="stay stay--sand stay--to-poll" id="xiangxi" data-property="xiangxi" aria-labelledby="xiangxi-title">
         <div class="stay__hero shell reveal">
           <img src="/assets/stays/xiangxi-hero.webp" width="960" height="660" alt="香溪无边绿野泳池溪边营地的房源图片" loading="lazy">
           <div class="stay__number" aria-hidden="true">04</div>
@@ -213,20 +223,22 @@
             <p class="confirm">下单前，请商家按日期和房间分配给出书面总价，并发送从住宿到水边的连续视频与实时水况。</p>
             <a class="property-cta" href="https://hotels.ctrip.com/hotels/120818508.html" target="_blank" rel="noopener noreferrer">打开携程房源 <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="mosaic reveal" aria-label="香溪无边绿野房源图片">
-            <img src="/assets/stays/xiangxi-stay.webp" width="600" height="360" alt="香溪无边绿野住宿空间" loading="lazy">
+          <div class="mosaic mosaic--four reveal" aria-label="香溪无边绿野房源图片">
+            <img src="/assets/stays/xiangxi-stay.webp" width="600" height="360" alt="香溪无边绿野户外泳池" loading="lazy">
             <img src="/assets/stays/xiangxi-stream.webp" width="600" height="360" alt="香溪无边绿野公共活动空间" loading="lazy">
+            <img src="/assets/stays/xiangxi-gallery-a.webp" width="1280" height="853" alt="香溪无边绿野山景草坪与天幕" loading="lazy">
+            <img src="/assets/stays/xiangxi-gallery-b.webp" width="1280" height="719" alt="香溪无边绿野傍晚住宿建筑与泳池" loading="lazy">
           </div>
         </div>
       </article>
     </div>
 
-    <section class="poll section" id="poll" aria-labelledby="poll-title">
+    <section class="poll poll--bridge section" id="poll" aria-labelledby="poll-title">
       <div class="shell">
         <div class="section-head reveal">
           <p class="eyebrow">一起选一个</p>
           <h2 id="poll-title">哪一处，最像这次旅行？</h2>
-          <p>内部意向投票 · 不收集姓名 · 每台设备一票 · 结果仅供讨论</p>
+          <p>内部意向投票 · 不收集身份信息 · 可撤回后重选 · 结果仅供讨论</p>
         </div>
         <p class="poll__status" id="poll-status" role="status" aria-live="polite">正在读取大家的选择…</p>
         <div class="poll-grid" id="poll-grid">
@@ -271,11 +283,11 @@
             </div>
           </article>
         </div>
-        <p class="poll__disclosure">票数来自 CountAPI 公共匿名计数服务。它只按四个不含身份信息的候选键记录汇总数字；本站不收集姓名或其他身份信息。若接口被微信或网络拦截，投票会诚实提示失败，照片、页面导航和携程链接仍可正常使用。</p>
+        <p class="poll__disclosure">票数来自自托管匿名汇总接口。每次投票或撤回只发送一个随机操作编号、候选项和操作类型；接口保存四项汇总票数与幂等操作结果，不保存访问 IP、姓名、设备编号或其他身份信息，也不使用 Cookie。本机只用 localStorage 保存当前选择和待重试操作。若接口被微信或网络拦截，页面会保留原选择并提示重试，照片、页面导航和携程链接仍可正常使用。</p>
       </div>
     </section>
 
-    <section class="rhythm section" id="rhythm" aria-labelledby="rhythm-title">
+    <section class="rhythm rhythm--bridge section" id="rhythm" aria-labelledby="rhythm-title">
       <div class="shell rhythm__layout">
         <div class="rhythm__intro reveal">
           <p class="eyebrow dark">3天2夜 · stay-in rhythm</p>
