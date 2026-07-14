@@ -1,10 +1,24 @@
 {
-  "name": "FrEaSoN-8月旅游方案精选",
-  "short_name": "FrEaSoN精选",
+  "name": "FrEaSoN 8月旅游方案",
+  "short_name": "FrEaSoN 8月",
+  "description": "20人以下团队的广州周边3天2夜山水住宿候选",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#071f1b",
-  "theme_color": "#071f1b",
-  "icons": []
+  "background_color": "#f7f5ed",
+  "theme_color": "#173b33",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/share/freason-share-square.jpg",
+      "sizes": "600x600",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
 }
-
