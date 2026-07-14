@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no,email=no,address=no">
+  <meta name="theme-color" content="#071f1b">
+  <title>FrEaSoN-8月旅游方案精选</title>
+  <meta name="description" content="广州周边 3 天 2 夜溪水别墅：实景、预算、泳池与避坑清单。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FrEaSoN-8月旅游方案精选">
+  <meta property="og:description" content="广州周边 · 20 人以内 · 溪水别墅 · 3 天 2 夜">
+  <meta property="og:image" content="https://freasont.github.io/slides/01-cover.jpg">
+  <meta property="og:url" content="https://freasont.github.io/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preload" href="/slides/01-cover.jpg" as="image" fetchpriority="high">
+  <style>
+    :root{color-scheme:dark;--forest:#071f1b;--mint:#8fd8c8;--sun:#ffb54a;--paper:#f7f6f1}
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--forest);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+    button,a{font:inherit}
+    .deck{height:100vh;height:100dvh;overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior-y:contain;scrollbar-width:none}
+    .deck::-webkit-scrollbar{display:none}
+    .slide{--bg:none;position:relative;height:100vh;height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;display:grid;place-items:center;overflow:hidden;background:#0b2923}
+    .slide::before{content:"";position:absolute;inset:-8%;background-image:linear-gradient(rgba(5,25,21,.58),rgba(5,25,21,.72)),var(--bg);background-size:cover;background-position:center;filter:blur(22px) saturate(.86);transform:scale(1.08)}
+    .poster-shell{position:relative;z-index:1;width:min(100vw,calc((100dvh - 58px)*.5625),600px);aspect-ratio:9/16;box-shadow:0 28px 90px rgba(0,0,0,.42);background:var(--paper)}
+    .poster{display:block;width:100%;height:100%;object-fit:contain;-webkit-user-drag:none;user-select:none}
+    .hotspot{position:absolute;bottom:4.02%;height:3.65%;border-radius:999px;text-indent:-9999px;overflow:hidden}
+    .hotspot.ctrip{left:4.85%;width:29.2%}.hotspot.trip{left:35.95%;width:29.2%}
+    .dock{position:fixed;z-index:20;left:50%;bottom:max(9px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:7px 8px 7px 13px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(4,21,18,.76);box-shadow:0 12px 35px rgba(0,0,0,.32);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+    .count{min-width:42px;color:rgba(255,255,255,.68);font-size:12px;letter-spacing:.08em}
+    .dock a,.dock button{display:inline-flex;align-items:center;justify-content:center;height:34px;border:0;border-radius:999px;padding:0 14px;text-decoration:none;cursor:pointer}
+    .pdf{background:var(--mint);color:#07251f;font-weight:800;font-size:12px}.menu-button{background:rgba(255,255,255,.1);color:white;font-size:12px}
+    .progress{position:fixed;z-index:19;left:0;top:0;width:100%;height:3px;background:rgba(255,255,255,.08)}
+    .progress span{display:block;width:11.111%;height:100%;background:var(--sun);transition:width .3s ease}
+    dialog{width:min(92vw,430px);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:0;color:white;background:rgba(7,31,27,.96);box-shadow:0 30px 100px rgba(0,0,0,.5);backdrop-filter:blur(18px)}
+    dialog::backdrop{background:rgba(0,0,0,.58);backdrop-filter:blur(4px)}
+    .sheet-head{display:flex;align-items:center;justify-content:space-between;padding:20px 20px 14px;border-bottom:1px solid rgba(255,255,255,.11)}
+    .sheet-head strong{font-size:16px}.close{width:32px;height:32px;border:0;border-radius:50%;background:rgba(255,255,255,.1);color:white;font-size:18px}
+    .toc{display:grid;gap:7px;padding:14px 14px 20px}.toc button{display:flex;justify-content:space-between;width:100%;border:0;border-radius:13px;padding:13px 14px;text-align:left;color:white;background:rgba(255,255,255,.07)}
+    .toc small{color:var(--mint)}
+    @media (max-height:650px){.dock{transform:translateX(-50%) scale(.9);transform-origin:bottom center}.poster-shell{width:min(100vw,calc((100dvh - 48px)*.5625))}}
+    @media (prefers-reduced-motion:reduce){.deck{scroll-behavior:auto}.progress span{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <main class="deck" id="deck" aria-label="FrEaSoN 旅行方案图册">
+    <section class="slide" data-title="封面" style="--bg:url('/slides/01-cover.jpg')"><div class="poster-shell"><img class="poster" src="/slides/01-cover.jpg" alt="FrEaSoN-8月旅游方案精选封面" fetchpriority="high"></div></section>
+    <section class="slide" data-title="四案总览" style="--bg:url('/slides/02-overview.jpg')"><div class="poster-shell"><img class="poster" src="/slides/02-overview.jpg" alt="四个住宿方案总览" loading="lazy"></div></section>
+    <section class="slide" data-title="聚城园舍" style="--bg:url('/slides/03-jucheng.jpg')"><div class="poster-shell"><img class="poster" src="/slides/03-jucheng.jpg" alt="聚城园舍方案" loading="lazy"><a class="hotspot ctrip" href="https://hotels.ctrip.com/hotels/5653016.html" target="_blank" rel="noreferrer">打开携程</a><a class="hotspot trip" href="https://tw.trip.com/hotels/guangzhou-hotel-detail-5653016/conghua-guangzhou-jucheng-yuanshe-valley-stream-homestay/" target="_blank" rel="noreferrer">查看房型</a></div></section>
+    <section class="slide" data-title="森归" style="--bg:url('/slides/04-sengui.jpg')"><div class="poster-shell"><img class="poster" src="/slides/04-sengui.jpg" alt="南昆山森归方案" loading="lazy"><a class="hotspot ctrip" href="https://hotels.ctrip.com/hotels/112741005.html" target="_blank" rel="noreferrer">打开携程</a><a class="hotspot trip" href="https://tw.trip.com/hotels/longmen-hotel-detail-112741005/long-men-nan-kun-shan-sen-gui-min-su/" target="_blank" rel="noreferrer">查看房型</a></div></section>
+    <section class="slide" data-title="听山" style="--bg:url('/slides/05-tingshan.jpg')"><div class="poster-shell"><img class="poster" src="/slides/05-tingshan.jpg" alt="南昆山听山方案" loading="lazy"><a class="hotspot ctrip" href="https://hotels.ctrip.com/hotels/127225411.html" target="_blank" rel="noreferrer">打开携程</a><a class="hotspot trip" href="https://tw.trip.com/hotels/longmen-hotel-detail-127225411/hui-zhou-long-men-ting-shan-ye-she-wen-quan-min-su/" target="_blank" rel="noreferrer">查看房型</a></div></section>
+    <section class="slide" data-title="香溪" style="--bg:url('/slides/06-xiangxi.jpg')"><div class="poster-shell"><img class="poster" src="/slides/06-xiangxi.jpg" alt="香溪无边绿野方案" loading="lazy"><a class="hotspot ctrip" href="https://hotels.ctrip.com/hotels/120818508.html" target="_blank" rel="noreferrer">打开携程</a><a class="hotspot trip" href="https://hk.trip.com/hotels/guangzhou-hotel-detail-120818508/xiang-xi-shu-wu-bian-lv-ye-yong-chi-xi-bian-ying-di-min-su/" target="_blank" rel="noreferrer">查看房型</a></div></section>
+    <section class="slide" data-title="三天两夜" style="--bg:url('/slides/07-itinerary.jpg')"><div class="poster-shell"><img class="poster" src="/slides/07-itinerary.jpg" alt="三天两夜行程" loading="lazy"></div></section>
+    <section class="slide" data-title="幼儿安全" style="--bg:url('/slides/08-safety.jpg')"><div class="poster-shell"><img class="poster" src="/slides/08-safety.jpg" alt="三岁半幼儿玩水安全" loading="lazy"></div></section>
+    <section class="slide" data-title="下单清单" style="--bg:url('/slides/09-checklist.jpg')"><div class="poster-shell"><img class="poster" src="/slides/09-checklist.jpg" alt="下单确认清单" loading="lazy"></div></section>
+  </main>
+
+  <nav class="dock" aria-label="图册操作">
+    <span class="count" id="pageCount">01 / 09</span>
+    <a class="pdf" href="/downloads/freason-august-travel.pdf">下载 PDF</a>
+    <button class="menu-button" id="menuButton" type="button">目录</button>
+  </nav>
+
+  <dialog id="menuDialog">
+    <div class="sheet-head"><strong>九页图册</strong><button class="close" id="closeButton" aria-label="关闭">×</button></div>
+    <div class="toc" id="toc"></div>
+  </dialog>
+
+  <script>
+    const slides=[...document.querySelectorAll('.slide')];
+    const deck=document.getElementById('deck');
+    const pageCount=document.getElementById('pageCount');
+    const progressBar=document.getElementById('progressBar');
+    const dialog=document.getElementById('menuDialog');
+    const toc=document.getElementById('toc');
+    let active=0;
+    const setActive=(index)=>{active=index;pageCount.textContent=String(index+1).padStart(2,'0')+' / 09';progressBar.style.width=((index+1)/slides.length*100)+'%'};
+    const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting&&entry.intersectionRatio>.55)setActive(slides.indexOf(entry.target))})},{root:deck,threshold:[.55,.75]});
+    slides.forEach((slide,index)=>{observer.observe(slide);const button=document.createElement('button');button.innerHTML=`<span>${String(index+1).padStart(2,'0')} · ${slide.dataset.title}</span><small>查看</small>`;button.onclick=()=>{dialog.close();slide.scrollIntoView({behavior:'smooth'})};toc.appendChild(button)});
+    document.getElementById('menuButton').onclick=()=>dialog.showModal();
+    document.getElementById('closeButton').onclick=()=>dialog.close();
+    dialog.addEventListener('click',(event)=>{if(event.target===dialog)dialog.close()});
+    document.addEventListener('WeixinJSBridgeReady',()=>setActive(active),false);
+  </script>
+</body>
+</html>
+
