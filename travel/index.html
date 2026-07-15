@@ -31,9 +31,9 @@
   <link rel="apple-touch-icon" href="/assets/share/freason-share-square.jpg">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="preload" href="/assets/stays/jucheng-hero.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="/styles.css?v=20260715-1">
+  <link rel="stylesheet" href="/styles.css?v=20260715-2">
   <script src="/poll.js?v=20260714-3" defer></script>
-  <script src="/app.js?v=20260715-2" defer></script>
+  <script src="/app.js?v=20260715-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -80,98 +80,149 @@
       <div class="shell">
         <div class="inspiration__head">
           <div>
-            <p class="eyebrow dark">小红书精品灵感</p>
-            <h2 id="inspiration-title">再多看6个，<br>把选择打开一点。</h2>
+            <p class="eyebrow dark">溪边住处 · 补充灵感</p>
+            <h2 id="inspiration-title">再看八处，<br>但不越过证据。</h2>
           </div>
           <div class="inspiration__intro">
-            <p>这组是更宽一点的精品住宿灵感案例，不参与当前四选一投票。微信会拦截直接打开 App 搜索的链接；点按钮会复制完整名称并打开小红书，再粘贴搜索。</p>
-            <p id="inspiration-boundary" class="inspiration__boundary">房源身份与携程条目及预订入口已交叉核验；2026年8月具体房态、20人以下团队总报价、房间与床位分配、包场或包栋范围、设施开放与天气影响，均需向商家书面确认。</p>
-            <p id="xhs-copy-status" class="inspiration__boundary" role="status" aria-live="polite" aria-atomic="true"></p>
+            <p>这八处是四个主候选之外的补充线索，不参与当前四选一投票。每处都有精确对应房源的内容页：暖舍是小红书具体笔记，千里走单骑是旅游博主实住长文，其余六处是 Trip.com / ezTravel 汇集的住客图文点评页；它们补充现场观感，不代表全部来自独立编辑报道。各卡的“打开携程房源”仍是预订条目。</p>
+            <p class="inspiration__boundary" id="inspiration-boundary">所有候选的2026年8月房态、届时水况与安全、20人以下房间和床位分配、独享或包场范围及团队总报价，均须商家书面确认。</p>
           </div>
         </div>
 
-        <p class="inspiration-swipe" id="inspiration-swipe"><span aria-hidden="true">↔</span> 左右滑动，看看全部6个</p>
-        <div class="inspiration-grid" role="list" tabindex="0" aria-label="精品住宿灵感，横向滑动查看六个案例" aria-describedby="inspiration-boundary inspiration-swipe">
-          <article class="inspiration-card" data-inspiration-id="437224" role="listitem">
-            <img src="/assets/inspiration/crosswaters.webp" width="1280" height="610" alt="龙门十字水生态度假村山林与河流建筑环境" loading="lazy">
+        <p class="inspiration-swipe" id="inspiration-swipe"><span aria-hidden="true">↔</span> 左右滑动，查看全部八处</p>
+        <div class="inspiration-grid" role="list" tabindex="0" aria-label="八处溪边住宿补充灵感，手机可横向滑动" aria-describedby="inspiration-boundary inspiration-swipe">
+          <article class="inspiration-card reveal" data-inspiration-id="133846225" role="listitem">
+            <figure class="inspiration-card__media">
+              <img src="/assets/inspiration/nuanshe-shanqi.webp" width="640" height="850" alt="暖舍山栖木屋、泳池与天然溪流的房源图片" loading="lazy">
+              <figcaption>携程条目 133846225 · 南昆山</figcaption>
+            </figure>
             <div class="inspiration-card__body">
-              <p class="inspiration-card__tag">生态质感 · 酒店 / 多房组合</p>
-              <h3>龙门十字水生态度假村</h3>
-              <p>森林、河流与建筑融在一起，适合找更安静、更有生态质感的山居方向。</p>
-              <p class="inspiration-card__fit"><strong>组队提醒</strong>　20人以下团队的房间分配及是否可包场，都要单独询问。</p>
+              <p class="inspiration-card__tag">木屋组合 · 泳池邻溪</p>
+              <h3>惠州龙门南昆山暖舍山栖温泉溯溪民宿</h3>
+              <p class="inspiration-card__verified"><strong>房源 / 点评可核</strong>　一居、二居、三居木屋；实际泳池与天然溪流并排相邻。</p>
+              <p class="inspiration-card__fit"><strong>待商家书面确认</strong>　8月房态、水况与安全；多栋组合的房床分配、独享范围与20人以下团队总报价。</p>
               <div class="inspiration-actions">
-                <a href="https://www.xiaohongshu.com/explore" target="_blank" rel="noopener noreferrer" data-xhs-keyword="龙门十字水生态度假村">复制名称，去小红书</a>
-                <a href="https://hotels.ctrip.com/hotels/437224.html" target="_blank" rel="noopener noreferrer">携程核房型</a>
+                <a class="inspiration-content" href="https://www.xiaohongshu.com/explore/6a53988f000000001003df4d" target="_blank" rel="noopener noreferrer">小红书具体笔记</a>
+                <a href="https://hotels.ctrip.com/hotels/133846225.html" target="_blank" rel="noopener noreferrer">打开携程房源</a>
               </div>
             </div>
           </article>
 
-          <article class="inspiration-card" data-inspiration-id="67755683" role="listitem">
-            <img src="/assets/inspiration/shangshui.webp" width="1280" height="853" alt="广州上水精品设计酒店河畔建筑与山林环境" loading="lazy">
+          <article class="inspiration-card reveal" data-inspiration-id="84034159" role="listitem">
+            <figure class="inspiration-card__media">
+              <img src="/assets/inspiration/luofu-xishe.webp" width="960" height="600" alt="罗浮溪舍建筑、草坪与户外泳池的航拍房源图片" loading="lazy">
+              <figcaption>携程条目 84034159 · 罗浮山</figcaption>
+            </figure>
             <div class="inspiration-card__body">
-              <p class="inspiration-card__tag">设计私汤 · 酒店 / 多房组合</p>
-              <h3>广州上水精品设计酒店</h3>
-              <p>携程广州设计酒店榜 No.11；私汤、设计感与河畔环境是主要灵感。</p>
-              <p class="inspiration-card__fit"><strong>组队提醒</strong>　按酒店多房组合考虑，房量与床型要逐间确认。</p>
+              <p class="inspiration-card__tag">15间房 · 泳池溯溪</p>
+              <h3>罗浮溪舍民宿</h3>
+              <p class="inspiration-card__verified"><strong>房源 / 点评可核</strong>　有实际泳池与溪流步行玩水线索；条目显示共15间房。</p>
+              <p class="inspiration-card__fit"><strong>待商家书面确认</strong>　8月房态、水况与安全；15间房可组合数量、房床分配、独享范围与20人以下团队总报价。</p>
               <div class="inspiration-actions">
-                <a href="https://www.xiaohongshu.com/explore" target="_blank" rel="noopener noreferrer" data-xhs-keyword="广州上水精品设计酒店">复制名称，去小红书</a>
-                <a href="https://hotels.ctrip.com/hotels/67755683.html" target="_blank" rel="noopener noreferrer">携程核房型</a>
+                <a class="inspiration-content" href="https://tw.trip.com/hotels/boluo-hotel-detail-84034159/xishe-guesthouse" target="_blank" rel="noopener noreferrer">158条住客图文点评</a>
+                <a href="https://hotels.ctrip.com/hotels/84034159.html" target="_blank" rel="noopener noreferrer">打开携程房源</a>
               </div>
             </div>
           </article>
 
-          <article class="inspiration-card" data-inspiration-id="1057775" role="listitem">
-            <img src="/assets/inspiration/yiluan.webp" width="1280" height="810" alt="英德积庆里仙湖倚峦风吕温泉度假酒店山湖建筑环境" loading="lazy">
+          <article class="inspiration-card reveal" data-inspiration-id="133532775" role="listitem">
+            <figure class="inspiration-card__media">
+              <img src="/assets/inspiration/qianli-fuxipan.webp" width="960" height="600" alt="千里走单骑浮溪畔山景建筑环抱的户外泳池房源图片" loading="lazy">
+              <figcaption>携程条目 133532775 · 罗浮山</figcaption>
+            </figure>
             <div class="inspiration-card__body">
-              <p class="inspiration-card__tag">山湖温泉 · 客房 / 别墅组合</p>
-              <h3>英德积庆里仙湖·倚峦风吕温泉度假酒店</h3>
-              <p>山湖温泉、KTV，以及客房与别墅的组合，为多人活动提供另一种思路。</p>
-              <p class="inspiration-card__fit"><strong>组队提醒</strong>　20人以下团队的床位怎么分，必须按实际可售房型询问。</p>
+              <p class="inspiration-card__tag">27间房 · 河畔泳池</p>
+              <h3>千里走单骑·浮溪畔（罗浮山店）</h3>
+              <p class="inspiration-card__verified"><strong>房源 / 点评可核</strong>　有实际户外泳池，临河且有溪流步行玩水线索；条目显示共27间房。</p>
+              <p class="inspiration-card__fit"><strong>待商家书面确认</strong>　8月房态、水况与安全；团队可用房量、房床分配、独享范围与20人以下团队总报价。</p>
               <div class="inspiration-actions">
-                <a href="https://www.xiaohongshu.com/explore" target="_blank" rel="noopener noreferrer" data-xhs-keyword="英德积庆里仙湖·倚峦风吕温泉度假酒店">复制名称，去小红书</a>
-                <a href="https://hotels.ctrip.com/hotels/1057775.html" target="_blank" rel="noopener noreferrer">携程核房型</a>
+                <a class="inspiration-content" href="https://www.sina.cn/news/detail/5316735519690343.html" target="_blank" rel="noopener noreferrer">旅游博主实住长文</a>
+                <a href="https://hotels.ctrip.com/hotels/133532775.html" target="_blank" rel="noopener noreferrer">打开携程房源</a>
               </div>
             </div>
           </article>
 
-          <article class="inspiration-card" data-inspiration-id="5782050" role="listitem">
-            <img src="/assets/inspiration/xiaojing.webp" width="1280" height="800" alt="惠州小径湾艾美酒店海景泳池与建筑环境" loading="lazy">
+          <article class="inspiration-card reveal" data-inspiration-id="120064122" role="listitem">
+            <figure class="inspiration-card__media">
+              <img src="/assets/inspiration/julong-nankunshan.webp" width="960" height="600" alt="聚龙露营溯溪民宿山景、草坪与户外泳池的房源图片" loading="lazy">
+              <figcaption>携程条目 120064122 · 南昆山</figcaption>
+            </figure>
             <div class="inspiration-card__body">
-              <p class="inspiration-card__tag">海边支线 · 多房酒店</p>
-              <h3>惠州小径湾艾美酒店</h3>
-              <p>入选携程2026中国美景酒店榜，180°海景与泳池把方向从山溪切换到海边。</p>
-              <p class="inspiration-card__fit"><strong>组队提醒</strong>　这是多房酒店，不是整屋包栋方案。</p>
+              <p class="inspiration-card__tag">6房12床 · 独立单元</p>
+              <h3>龙门南昆山聚龙露营溯溪温泉民宿</h3>
+              <p class="inspiration-card__verified"><strong>房源 / 点评可核</strong>　山泉泳池紧邻溪流；有6房12床的独立单元产品。</p>
+              <p class="inspiration-card__fit"><strong>待商家书面确认</strong>　8月房态、水况与安全；实际入住上限、房床分配、单元独享范围与20人以下团队总报价。</p>
               <div class="inspiration-actions">
-                <a href="https://www.xiaohongshu.com/explore" target="_blank" rel="noopener noreferrer" data-xhs-keyword="惠州小径湾艾美酒店">复制名称，去小红书</a>
-                <a href="https://hotels.ctrip.com/hotels/5782050.html" target="_blank" rel="noopener noreferrer">携程核房型</a>
+                <a class="inspiration-content" href="https://hk.trip.com/hotels/longmen-hotel-detail-120064122/anan-kuan-mountain-ju-long-homestay" target="_blank" rel="noopener noreferrer">166条住客图文点评</a>
+                <a href="https://hotels.ctrip.com/hotels/120064122.html" target="_blank" rel="noopener noreferrer">打开携程房源</a>
               </div>
             </div>
           </article>
 
-          <article class="inspiration-card" data-inspiration-id="69293592" role="listitem">
-            <img src="/assets/inspiration/aishu.webp" width="1280" height="853" alt="龙门爱树南昆秘境民宿泳池、独栋与森林环境" loading="lazy">
+          <article class="inspiration-card reveal" data-inspiration-id="123107144" role="listitem">
+            <figure class="inspiration-card__media">
+              <img src="/assets/inspiration/yingshe-nankunshan.webp" width="960" height="600" alt="颖舍民宿竹林中的建筑与户外泳池航拍房源图片" loading="lazy">
+              <figcaption>携程条目 123107144 · 南昆山</figcaption>
+            </figure>
             <div class="inspiration-card__body">
-              <p class="inspiration-card__tag">精品民宿 · 独栋 / 多栋组合</p>
-              <h3>龙门爱树·南昆秘境民宿</h3>
-              <p>携程惠州精品民宿榜 No.15；森林图书馆、泳池和独栋别墅最贴近精品民宿方向。</p>
-              <p class="inspiration-card__fit"><strong>组队提醒</strong>　整栋或多栋能否同日组合，需要直接询问。</p>
+              <p class="inspiration-card__tag">景观泳池 · 自有 / 邻溪</p>
+              <h3>南昆山颖舍溯溪民宿</h3>
+              <p class="inspiration-card__verified"><strong>房源 / 点评可核</strong>　有实际景观泳池，以及自有或紧邻溪流的玩水线索。</p>
+              <p class="inspiration-card__fit"><strong>待商家书面确认</strong>　8月房态、水况与安全；可组合房型、房床分配、独享范围与20人以下团队总报价。</p>
               <div class="inspiration-actions">
-                <a href="https://www.xiaohongshu.com/explore" target="_blank" rel="noopener noreferrer" data-xhs-keyword="龙门爱树·南昆秘境民宿">复制名称，去小红书</a>
-                <a href="https://hotels.ctrip.com/hotels/69293592.html" target="_blank" rel="noopener noreferrer">携程核房型</a>
+                <a class="inspiration-content" href="https://hk.trip.com/hotels/longmen-hotel-detail-123107144/nankunshan-yingshe-homestay" target="_blank" rel="noopener noreferrer">80条住客图文点评</a>
+                <a href="https://hotels.ctrip.com/hotels/123107144.html" target="_blank" rel="noopener noreferrer">打开携程房源</a>
               </div>
             </div>
           </article>
 
-          <article class="inspiration-card" data-inspiration-id="98323245" role="listitem">
-            <img src="/assets/inspiration/zhonghai.webp" width="1280" height="853" alt="惠州中海汤泉酒店湖畔别墅与中式园林环境" loading="lazy">
+          <article class="inspiration-card reveal" data-inspiration-id="133668474" role="listitem">
+            <figure class="inspiration-card__media">
+              <img src="/assets/inspiration/shanxiyu-luofushan.webp" width="960" height="600" alt="山溪雨溪边美宿客房旁可见天然溪流的房源图片" loading="lazy">
+              <figcaption>携程条目 133668474 · 罗浮山</figcaption>
+            </figure>
             <div class="inspiration-card__body">
-              <p class="inspiration-card__tag">湖畔汤泉 · 酒店 / 别墅组合</p>
-              <h3>惠州中海汤泉酒店</h3>
-              <p>入选携程2026中国温泉酒店榜；无边泳池、湖畔别墅与中式园林是主要看点。</p>
-              <p class="inspiration-card__fit"><strong>组队提醒</strong>　按酒店与别墅组合核房，不预设整场包下。</p>
+              <p class="inspiration-card__tag">3房6床 · 双泳池</p>
+              <h3>山溪雨·溪边美宿</h3>
+              <p class="inspiration-card__verified"><strong>房源 / 点评可核</strong>　有山泉无边泳池和儿童泳池，步行几步可到溪边；有3房6床单元。</p>
+              <p class="inspiration-card__fit"><strong>待商家书面确认</strong>　8月房态、水况与安全；多单元组合、房床分配、独享范围与20人以下团队总报价。</p>
               <div class="inspiration-actions">
-                <a href="https://www.xiaohongshu.com/explore" target="_blank" rel="noopener noreferrer" data-xhs-keyword="惠州中海汤泉酒店">复制名称，去小红书</a>
-                <a href="https://hotels.ctrip.com/hotels/98323245.html" target="_blank" rel="noopener noreferrer">携程核房型</a>
+                <a class="inspiration-content" href="https://tw.trip.com/hotels/boluo-hotel-detail-133668474/sxy" target="_blank" rel="noopener noreferrer">住客图文点评</a>
+                <a href="https://hotels.ctrip.com/hotels/133668474.html" target="_blank" rel="noopener noreferrer">打开携程房源</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="inspiration-card reveal" data-inspiration-id="103819838" role="listitem">
+            <figure class="inspiration-card__media">
+              <img src="/assets/inspiration/miyuan-nankunshan.webp" width="960" height="600" alt="觅园野奢民宿白色建筑与户外泳池的房源图片" loading="lazy">
+              <figcaption>携程条目 103819838 · 南昆山</figcaption>
+            </figure>
+            <div class="inspiration-card__body">
+              <p class="inspiration-card__tag">11房18床 · 整租产品</p>
+              <h3>南昆山·觅园野奢私汤溯溪民宿</h3>
+              <p class="inspiration-card__verified"><strong>房源 / 点评可核</strong>　条目有11房18床整租产品，并有实际泳池与溪流步行玩水线索。</p>
+              <p class="inspiration-card__fit"><strong>待商家书面确认</strong>　8月房态、水况与安全；该产品是否可订、实际房床分配、独享范围与20人以下团队总报价。</p>
+              <div class="inspiration-actions">
+                <a class="inspiration-content" href="https://hk.trip.com/hotels/longmen-hotel-detail-103819838/mi-yuan-jing-pin-min-su" target="_blank" rel="noopener noreferrer">11条住客图文点评</a>
+                <a href="https://hotels.ctrip.com/hotels/103819838.html" target="_blank" rel="noopener noreferrer">打开携程房源</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="inspiration-card reveal" data-inspiration-id="81439256" role="listitem">
+            <figure class="inspiration-card__media">
+              <img src="/assets/inspiration/muyungui-luofushan.webp" width="960" height="600" alt="暮云归隐沫美学庄园白色庄园与户外泳池的房源图片" loading="lazy">
+              <figcaption>携程条目 81439256 · 罗浮山</figcaption>
+            </figure>
+            <div class="inspiration-card__body">
+              <p class="inspiration-card__tag">景观泳池 · 溪边村落</p>
+              <h3>暮云归·隐沫美学庄园（罗浮山店）</h3>
+              <p class="inspiration-card__verified"><strong>房源 / 点评可核</strong>　有实际户外景观泳池；位于溪边村落，有邻近溪流步行玩水线索。</p>
+              <p class="inspiration-card__fit"><strong>待商家书面确认</strong>　8月房态、水况与安全；可组合房型、房床分配、独享范围与20人以下团队总报价。</p>
+              <div class="inspiration-actions">
+                <a class="inspiration-content" href="https://hotel.eztravel.com.tw/detail-boluo-21728-81439256/muyungui-resort" target="_blank" rel="noopener noreferrer">354条住客图文点评</a>
+                <a href="https://hotels.ctrip.com/hotels/81439256.html" target="_blank" rel="noopener noreferrer">打开携程房源</a>
               </div>
             </div>
           </article>
