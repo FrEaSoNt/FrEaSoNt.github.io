@@ -60,6 +60,27 @@ button { color: inherit; }
 .opening__note { padding-top: 30px; border-top: 1px solid var(--line); color: var(--muted); }
 .opening__note p { margin: 0 0 18px; }
 
+.inspiration { padding-block: clamp(72px, 8vw, 112px); background: linear-gradient(180deg, var(--paper) 0%, #edf1ea 100%); }
+.inspiration__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .8fr); gap: clamp(46px, 8vw, 110px); align-items: end; margin-bottom: 42px; }
+.inspiration__head h2 { max-width: 700px; margin: 0; font-size: clamp(40px, 5.5vw, 68px); font-weight: 650; letter-spacing: -.045em; line-height: 1.16; }
+.inspiration__intro { padding-top: 26px; border-top: 1px solid var(--line); color: var(--muted); }
+.inspiration__intro p { margin: 0; }
+.inspiration__boundary { margin-top: 14px !important; font-size: 14px; line-height: 1.65; }
+.inspiration-swipe { display: none; }
+.inspiration-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.inspiration-grid:focus-visible { border-radius: 24px; outline: 3px solid #a86c4f; outline-offset: 6px; }
+.inspiration-card { display: flex; min-width: 0; overflow: hidden; flex-direction: column; border: 1px solid rgba(23, 59, 51, .14); border-radius: 24px; background: rgba(255, 253, 247, .84); box-shadow: 0 16px 42px rgba(16, 45, 39, .08); }
+.inspiration-card > img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+.inspiration-card__body { display: flex; flex: 1; flex-direction: column; padding: 21px; }
+.inspiration-card__tag { margin: 0 0 8px; color: var(--forest-800); font-size: 13px; font-weight: 800; letter-spacing: .04em; }
+.inspiration-card h3 { margin: 0; font-size: clamp(22px, 2.1vw, 28px); letter-spacing: -.025em; line-height: 1.34; }
+.inspiration-card h3 + p { margin: 14px 0 0; color: #46534e; font-size: 15px; line-height: 1.65; }
+.inspiration-card__fit { flex: 1; margin: 15px 0 0; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; line-height: 1.6; }
+.inspiration-card__fit strong { color: var(--ink); }
+.inspiration-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 18px; }
+.inspiration-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 9px 10px; border: 1px solid rgba(23, 59, 51, .26); border-radius: 999px; color: var(--forest-900); font-size: 14px; font-weight: 750; line-height: 1.3; text-align: center; text-decoration: none; }
+.inspiration-actions a:last-child { border-color: var(--forest-900); background: var(--forest-900); color: var(--white); }
+
 .stay { --stay-bg: #edf1ea; padding-block: clamp(72px, 10vw, 130px); background: var(--stay-bg); }
 .stay--sage { --stay-bg: #dfe9df; }
 .stay--warm { --stay-bg: #eee5d8; }
@@ -166,6 +187,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f4c96b; outline-offs
   .site-nav__links a:hover, .footer a:hover { text-decoration: underline; text-underline-offset: 5px; }
   .hero__cta:hover { background: rgba(255, 255, 255, .2); }
   .property-cta:hover { background: var(--forest-800); }
+  .inspiration-actions a:hover { background: var(--sage); }
+  .inspiration-actions a:last-child:hover { background: var(--forest-800); }
   .poll-card:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, .32); }
   .vote-button:not(:disabled):hover { background: var(--sage); }
   .poll-card__actions a:hover { background: rgba(255, 255, 255, .1); }
@@ -183,9 +206,20 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f4c96b; outline-offs
   .site-nav__links a { padding-inline: 7px; font-size: 14px; }
   .hero h1 { font-size: clamp(49px, 15vw, 68px); }
   .hero__lead { font-size: 18px; }
-  .opening, .stay__body, .rhythm__layout, .checklist__layout, .footer__inner { grid-template-columns: 1fr; }
+  .opening, .inspiration__head, .stay__body, .rhythm__layout, .checklist__layout, .footer__inner { grid-template-columns: 1fr; }
   .opening { gap: 44px; }
-  .opening h2, .section-head h2, .rhythm h2, .water-note h2, .checklist h2 { font-size: clamp(38px, 11vw, 48px); }
+  .opening h2, .inspiration__head h2, .section-head h2, .rhythm h2, .water-note h2, .checklist h2 { font-size: clamp(38px, 11vw, 48px); }
+  .inspiration { padding-block: 70px 76px; }
+  .inspiration__head { gap: 38px; margin-bottom: 22px; }
+  .inspiration__intro { padding-top: 22px; }
+  .inspiration__boundary { font-size: 14px; }
+  .inspiration-swipe { display: flex; align-items: center; gap: 8px; margin: 0 0 13px; color: var(--forest-800); font-size: 14px; font-weight: 750; }
+  .inspiration-swipe span { font-size: 20px; }
+  .inspiration-grid { grid-auto-columns: minmax(278px, 86%); grid-auto-flow: column; grid-template-columns: none; gap: 13px; width: calc(100% + 32px); max-width: none; margin-inline: -16px; padding: 2px 16px 18px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-padding-inline: 16px; scroll-snap-type: x mandatory; scrollbar-color: var(--forest-200) transparent; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
+  .inspiration-card { scroll-snap-align: start; scroll-snap-stop: always; border-radius: 21px; }
+  .inspiration-card__body { padding: 19px; }
+  .inspiration-card h3 { font-size: 24px; }
+  .inspiration-card h3 + p { font-size: 15px; }
   .stay { padding-block: 70px 90px; }
   .stay__hero img { width: calc(100% + 32px); max-width: none; margin-left: -16px; border-radius: 0; aspect-ratio: 4 / 3; }
   .stay__number { right: 14px; bottom: -8px; }
@@ -222,6 +256,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f4c96b; outline-offs
   .site-nav__links a { padding-inline: 5px; font-size: 13px; }
   .hero h1 { font-size: 48px; }
   .hero__lead { margin-top: 22px; }
+  .inspiration-grid { grid-auto-columns: minmax(270px, 88%); width: calc(100% + 28px); margin-inline: -14px; padding-inline: 14px; scroll-padding-inline: 14px; }
+  .inspiration-card__body { padding: 18px; }
+  .inspiration-actions { gap: 7px; }
+  .inspiration-actions a { padding-inline: 8px; font-size: 13px; }
   .stay__hero img { width: calc(100% + 28px); margin-left: -14px; }
   .stay__intro h2 { font-size: 43px; }
   .poll-card__body { padding: 19px; }
