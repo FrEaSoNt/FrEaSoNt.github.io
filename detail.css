@@ -124,6 +124,9 @@ button { color: inherit; }
 .video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 38px; }
 .video-card { display: flex; min-width: 0; flex-direction: column; padding: 26px; border: 1px solid var(--line); border-radius: 24px; background: var(--white); box-shadow: 0 12px 34px rgba(25, 44, 38, .07); }
 .video-card__warning { margin: 0 0 16px; padding: 10px 12px; border-radius: 12px; background: #fff0c9; color: #5c4317; font-size: 14px; font-weight: 850; }
+.video-card__media { margin: 0 0 20px; overflow: hidden; border-radius: 18px; background: #10211b; }
+.video-card__media video { display: block; width: 100%; aspect-ratio: 16 / 9; max-height: 620px; background: #10211b; object-fit: contain; }
+.video-card__media--portrait video { aspect-ratio: 3 / 4; }
 .video-card p:not(.video-card__warning) { color: var(--muted); }
 .video-card a, .copy-button, .detail-footer a { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; }
 .video-card a { margin-top: auto; padding: 12px 18px; border-radius: 999px; background: var(--accent-deep); color: var(--white); font-weight: 800; text-decoration: none; }

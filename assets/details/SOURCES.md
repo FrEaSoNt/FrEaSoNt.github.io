@@ -1,13 +1,13 @@
-# Three detail-page exact-property image provenance
+# Three detail-page exact-property media provenance
 
-Retrieved: 2026-07-15. All images are local optimized copies from the matching official Ctrip listing; none are generated or lookalike imagery. Public presentation is source-attributed. Listing images establish visible property identity/appearance only, not August availability, room allocation, exclusivity, water safety, or live price.
+Images retrieved 2026-07-15; Fuxipan videos reverified and localized 2026-07-16. All media comes from the matching Ctrip listing or its exact linked Ctrip community item; none is generated or lookalike media. Public presentation is source-attributed. Listing media establishes visible property identity/appearance only, not August availability, room allocation, exclusivity, water safety, or live price.
 
 ## Stable page use
 
 - `/travel/tingshan/` uses `assets/details/tingshan/01.webp` as the non-lazy hero and `02.webp`–`07.webp` as lazy gallery images for exact Ctrip ID `127225411`.
 - `/travel/nuanshe/` uses `assets/details/nuanshe/01.webp` as the non-lazy hero and `02.webp`–`07.webp` as lazy gallery images for exact Ctrip ID `133846225`.
-- `/travel/fuxipan/` uses `assets/details/fuxipan/01.webp` as the non-lazy hero and `02.webp`–`07.webp` as lazy gallery images for exact Ctrip ID `133532775`.
-- No asset was added, regenerated, or altered during page implementation. Each page visibly attributes the images through its single exact Ctrip listing link; dimensions and hashes below remain the verification ledger.
+- `/travel/fuxipan/` uses `assets/details/fuxipan/01.webp` as the non-lazy hero, `02.webp`–`07.webp` as lazy gallery images, and two local MP4 videos plus frame-derived posters for exact Ctrip ID `133532775`.
+- Each page visibly attributes media through its exact Ctrip listing/content link; dimensions, durations, byte sizes and hashes below remain the verification ledger.
 
 | Local asset | Property | Ctrip ID | Listing page | Original delivery URL | Original dimensions | Local dimensions | Bytes | SHA-256 |
 |---|---|---:|---|---|---:|---:|---:|---|
@@ -32,3 +32,7 @@ Retrieved: 2026-07-15. All images are local optimized copies from the matching o
 | `assets/details/fuxipan/05.webp` | 千里走单骑·浮溪畔（罗浮山店） | `133532775` | https://hotels.ctrip.com/hotels/133532775.html | https://dimg04.c-ctrip.com/images/1mc1112000rk7vbdvFD30_W_1280_853_R5_Q70.jpg | 1280×853 | 1200×800 | 75826 | `f618aaddda8b84b6ab8a45103e43759860bb1fa4d9a355cce8afc69fbd888022` |
 | `assets/details/fuxipan/06.webp` | 千里走单骑·浮溪畔（罗浮山店） | `133532775` | https://hotels.ctrip.com/hotels/133532775.html | https://dimg04.c-ctrip.com/images/0205m12000rdc5tofEBA8_W_1280_853_R5_Q70.jpg | 1280×853 | 1200×800 | 41600 | `c094e3fae3b93eb22ab168ceb4f295db37c4a857cc47ff04d74f3687b9557046` |
 | `assets/details/fuxipan/07.webp` | 千里走单骑·浮溪畔（罗浮山店） | `133532775` | https://hotels.ctrip.com/hotels/133532775.html | https://dimg04.c-ctrip.com/images/1mc0412000rk7uk2c1E35_W_1280_853_R5_Q70.jpg | 569×853 | 569×853 | 54462 | `e58cda3710e5e9e29a4295e3e23d2503630fcbcff61a029907e74efe3235374b` |
+| `assets/details/fuxipan/ctrip-property-tour.mp4` | 千里走单骑·浮溪畔（罗浮山店） | `133532775` | https://m.ctrip.com/html5/hotel/hoteldetail/133532775.html | https://video.c-ctrip.com/videos/u001cn14x98gkvjmd4B4B.mp4 | 1280×720 · 33.437s | 1280×720 · 33.437s | 5459305 | `1fa32275ddd077c155079d9e6a6532341a71e36db33c439e63929de2e1a2109f` |
+| `assets/details/fuxipan/ctrip-property-tour-poster.jpg` | 千里走单骑·浮溪畔（罗浮山店） | `133532775` | https://m.ctrip.com/html5/hotel/hoteldetail/133532775.html | frame at 2s from `u001cn14x98gkvjmd4B4B.mp4` | 1280×720 | 1280×720 | 240751 | `8d4a5cc156c3be227b2e1b5fe5b27ab4351b3ab141c2763739b1324d15bfa3df` |
+| `assets/details/fuxipan/ctrip-218-vlog.mp4` | 千里走单骑·浮溪畔（罗浮山店） | `133532775` | https://m.ctrip.com/webapp/you/community/detail?articleId=296098552 | https://video.c-ctrip.com/videos/1A0hcn14x9921qeez2BFB_smart.mp4?ts=1776822481000 | 1080×1440 · 56.417s | 1080×1440 · 56.417s | 13377485 | `df67aef4e42fd3ff232d22265cdc0bd21a4f8ab5541d6da89a9dadcf23712c2d` |
+| `assets/details/fuxipan/ctrip-218-vlog-poster.jpg` | 千里走单骑·浮溪畔（罗浮山店） | `133532775` | https://m.ctrip.com/webapp/you/community/detail?articleId=296098552 | frame at 52s from `1A0hcn14x9921qeez2BFB_smart.mp4` | 1080×1440 | 1080×1440 | 244834 | `32b1bcdd5c5498c5762cbcd8365a9e2d2f4c88df98672d7995883fa8021b13c0` |
